@@ -1,7 +1,7 @@
 {
-  "name": "henriksz.github.io",
+  "name": "salavina.github.io",
   "version": "0.0.5",
-  "description": "HenrikSZ's personal website",
+  "description": "Saeid's personal website",
   "scripts": {
     "build:prod": "NODE_ENV=production npx webpack",
     "build:dev": "NODE_ENV=development npx webpack",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HenrikSZ/henriksz.github.io.git"
+    "url": "git+https://github.com/salavina/salavina.github.io.git"
   },
-  "author": "Henrik Sven Zimmermann",
+  "author": "Saeid Alavi Naeini",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HenrikSZ/henriksz.github.io/issues"
+    "url": "https://github.com/salavina/salavina.github.io/issues"
   },
-  "homepage": "https://github.com/HenrikSZ/henriksz.github.io#readme",
+  "homepage": "https://github.com/salavina/salavina.github.io#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "clean-webpack-plugin": "^4.0.0",
