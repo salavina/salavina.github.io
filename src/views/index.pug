@@ -1,0 +1,103 @@
+extends layout.pug
+
+block header
+  +header-button(
+    "http://github.com/salavina",
+    require('../../assets/graphics/github-mark-white.svg'),
+    "GitHub Logo"
+  )
+  +header-button(
+    "http://linkedin.com/in/salavina",
+    require('../../assets/graphics/LI-In-Bug.png'),
+    "LinkedIn Logo"
+  )
+
+block content
+  div(class="flex-none lg:flex p-8")
+    div(class="flex-3 p-2")
+      h3(class="text-[#ebc462]") Saeid Alavi Naeini
+      h1 Machine Learning Research Associate @ UHN
+      h2 After receiving gold medal in Electrical Engineering from University of Western Ontario, I decided to pursue graduate studies where I completed my MASc in Biomedical Engineering at the University of Toronto under supervision of Dr. Babak Taati, Vector Affiliated Scientist.
+    div(class="flex-2 flex justify-center items-start")
+      img(src=require("../../assets/graphics/me.jpeg") class="object-contain" alt="Me")
+  div(class="xl:px-64 lg:px-32 md:px-16 px-2")
+    h1 Projects
+    h3 a selection - other projects can be found on my
+      a(href="https://github.com/salavina" class="text-blue-400 underline" target="_blank") GitHub Profile
+    div(class="lg:mx-4 mx-2")
+      +project(
+        "Lateral Thinking and RedHerrings: The Only-Connect Wall Dataset.",
+        ["NLP", "Unsupervised Learning", "Contextual Embedding", "Prompt Engineering"],
+        "https://github.com/salavina",
+        "Utilized web scraping solutions to gather data from diverse sources using Python and web scraping frameworks such as beautifulSoup, Scrapy, and Selenium (for JavaScript-heavy websites). \
+        Developed a comprehensive dataset for Natural Language Processing (NLP) tasks, which was successfully added to the Hugging Face Model Hub. \
+        Collaborated with a team of NLP experts affiliated with Vector Institute to define annotation guidelines for the dataset, ensuring high-quality annotations and facilitating  unsupervised learning tasks. \
+        Extensively worked with a wide range of NLP models, from traditional approaches like Word2Vec and GloVe to state-of-the-art models such as BERT and GPT-4.\
+        Performed prompt engineering: conducted in-depth research and analysis of prompts for LLMs such as GPT-4 and LLaMa, understanding the impact of prompting on model behaviour and output quality. \
+        Applied unsupervised learning techniques to the dataset, including constrained clustering, to group the wall clues into meaningful clusters based on contextual embeddings. \
+        Paper: SA Naeini, J Giorgi, R Saqur, M Saeidi, B Taati. \"Lateral Thinking and Red Herrings: The Only-Connect Wall Dataset.\"NeurIPS 2023 (submitted)."
+      )
+      +project(
+        "Improving Dysarthric Speech Segmentation with Emulated and Synthetic Augmentation.",
+        ["Automatic Speech Recognition", "Dynamic Time Warping", "Neurological Disorders", "Data Augmentation"],
+        "https://github.com/salavina",
+        "Curated and collected a large-scale dataset of TTS speech samples covering a wide range of accents, dialects, and speaking rates, ensuring representation of various linguistic characteristics. \
+        Developed fine-tuning pipelines and strategies to adapt pre-trained ASR models to the specific attributes of TTS speech data, addressing challenges such as accent variations, speaking rate differences, and dysarthric disorders. \
+        conducted extensive data processing, including utilization of Dynamic Time Warping for temporal segmentation of speech samples. \
+        Conducted thorough evaluations and benchmarking of the fine-tuned ASR models, comparing their performance with the baseline models on standard evaluation metrics such as Word Error Rate (WER) and accuracy. \
+        Collaborated with domain experts and linguists to validate the improvements achieved by proposed models, ensuring the enhanced models accurately captured dysarthric speech. \
+        Implemented MLOps practices by developing a web application that analyzes dysarthric speech and performs automatic temporal segmentation. The web app was developed using Docker and Kubernetes to ensure efficient deployment and scalability of machine learning models. \
+        Paper: SA Naeini, L Simmatis, D Jafari, Y Yunusova, B Taati. \"Improving Dysarthric Speech Segmentation with Emulated and Synthetic Augmentation.\" IEEE Journal of Biomedical and Health Informatics (JBHI). IEEE, 2023 (submitted). \
+        Paper: SA Naeini, et al. \"Concurrent Validity of Automatic Speech and Pause Measures During Passage Reading in ALS\" 2022 IEEE-EMBS International Conference on Biomedical and Health Informatics (BHI). IEEE, 2022."
+      )
+      +project(
+        "Automated Temporal Segmentation of Orofacial Assessment Videos.",
+        ["Computer Vision", "Deep Learning", "Neurological Disorders"],
+        "https://github.com/salavina",
+        "Applied transformer-based computer vision techniques to perform repetition counting in videos, achieving accurate and efficient analysis of repetitive actions or behaviors. \
+        Fine-tuned pre-trained transformer models on the repetition counting task, leveraging transfer learning to capture visual patterns and repetitive dynamics. \
+        Leveraged automatic repetition counting techniques to perform temporal segmentation and parsing of neurological assessment video data, enabling accurate analysis and understanding of repetitive actions in the context of neurological assessments.
+        Paper: SA Naeini, et al. \"Automated Temporal Segmentation of Orofacial Assessment Videos.\" 2022 IEEE-EMBS International Conference on Biomedical and Health Informatics (BHI). IEEE, 2022."
+      )
+      +project(
+        "VirtualSLP - A web application for Recording Patients’ Data Remotely with the Goal to Diagnose in Real-time",
+        ["Web Development", "AWS", "React", "flask", "UX/UI Design"],
+        "https://virtual-slp.com",
+        "Developed a web application for remote data collection during the COVID-19 pandemic, enabling efficient and secure data gathering from remote locations. \
+        Designed and implemented the user interface (UI) and user experience (UX) of the web app, focusing on simplicity, intuitiveness, and accessibility to accommodate users with varying technical expertise. \
+        Developed secure user authentication and authorization mechanisms to protect sensitive data and ensure proper access control for different user roles. \
+        Provided ongoing maintenance, bug fixes, and feature enhancements to optimize the web app's performance and address evolving user requirements. \
+        Utilized AWS cloud services such as EC2 to store and process web application’s content. \
+        Integrated Dropbox API to store data on HIPPA compliant platform."
+      )
+//-       +project(
+//-         "no-pain",
+//-         ["C++", "Bazel", "googletest"],
+//-         "https://github.com/HenrikSZ/no-pain",
+//-         "Let's create our own, painfully-to-work-with scripting language! That's what two friends and me thought \
+//-         for the deerhacks 2022 hackathon. So, we did it. Oh wonder, it was horrible to work with. So, I recreated it \
+//-         with proper syntax. Enjoy!"
+//-       )
+//-   div(class="xl:px-64 lg:px-32 md:px-16 px-2")
+//-     h1 Experience
+//-     h3 where I currently work - to dig in my past visit my
+//-       a(href="https://www.linkedin.com/in/henrikszimmermann" class="text-blue-400 underline" target="_blank") LinkedIn Profile
+//-     div(class="mx-4")
+//-       +experience(
+//-         "Teaching Assistant for Foundational Computer Science Courses",
+//-         "University of Toronto Mississauga",
+//-         "September 2022 - April 2023",
+//-         "Mississauga",
+//-         "I am teaching the basics of programming in Python and assisting students with designing their first applications. \
+//-         This includes faciliating labs/tutorials in which students work on assigned problems, hosting office hours \
+//-         to provide one-on-one support, and grading exams."
+//-       )
+//-     div(class="mx-4")
+//-       +experience(
+//-         "React Native Developer",
+//-         "Team Alphawit in the University of Toronto Hatchery Startup Incubator",
+//-         "May 2022 - March 2023",
+//-         "Toronto & Remote",
+//-         "I am wearing many different hats from scraping script kiddie to working on the big boy \
+//-         React Native app."
+//-       )
