@@ -13,7 +13,11 @@ mixin project(title, technologies, link, description)
         ul(class="list-outside list-disc")
           each tech in technologies
             li(class="text-lg") #{tech}
-      div(class="p-4 lg:pl-8 lg:pt-4 pt-8 lg:flex-5 text-xl") #{description}
+      div(class="p-4 lg:pl-8 lg:pt-4 pt-8 lg:flex-5 text-xl")
+        ul(class="list-outside list-disc")
+          each des in description
+            li(class="text-lg") #{description}
+
 
 mixin experience(title, company, time, place, description)
   div(class="mb-12")
